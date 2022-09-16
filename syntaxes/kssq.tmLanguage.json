@@ -23,11 +23,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.kssq",
-					"match": "\\b(layout|sequence|when|customer_new|customer_choose|customer_push|customer_pop|response|leave|dialog|random|receive|receive_back|blob_clear|print_copy|interruptible|return_cases|fax_cases|discrepancy|error|format|go_interrogate|go_counter|endday|leave_continue|go_toilet|notice_time|loop_until|window_close|window_open|set_emotion|regenerate|cutscene)\\b"
-				},
-				{
-					"name": "keyword.control.kssq",
-					"match": "\\b(series|gamename|author|wait|pass|set|continue|break|jump|landmark|branch|default|loop|copy|paste|if|else|\\$|escape|void|splash|commit|await)\\b"
+					"match": "\\b(series|gamename|author|wait|pass|set|continue|break|jump|landmark|branch|default|loop|copy|paste|if|else|\\$|escape|void|splash|commit|await|random|response|when|sequence|format)\\b"
 				}
 			]
 		},
