@@ -1,0 +1,88 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "KSSQ 2565",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#letter"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.kssq",
+					"match": "\\b(layout|sequence|when|customer_new|customer_choose|customer_push|customer_pop|response|leave|dialog|random|receive|receive_back|blob_clear|print_copy|interruptible|return_cases|fax_cases|discrepancy|error|format|go_interrogate|go_counter|endday|leave_continue|go_toilet|notice_time|loop_until|window_close|window_open|set_emotion|regenerate|cutscene)\\b"
+				},
+				{
+					"name": "keyword.control.kssq",
+					"match": "\\b(series|gamename|author|wait|pass|set|continue|break|jump|landmark|branch|default|loop|copy|paste|if|else|\\$|escape|void|splash|commit|await)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.kssq",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.kssq",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"match": "#.*",
+					"name": "comment.line.number-sign.kssq"
+				},
+				{
+					"begin": "(\\.\\#)",
+					"end" : "(\\#\\.)",
+					"name": "comment.block.kssq"
+				}
+			]
+		},
+		"numbers": {
+            "patterns": [
+                {
+                    "match": "\\b(?i:0x\\h*)\\b",
+                    "name": "constant.numeric.integer.hexadecimal.kssq"
+                },
+                {
+                    "match": "\\b(?i:(\\d+\\.\\d*(e[\\-\\+]?\\d+)?))\\b",
+                    "name": "constant.numeric.float.kssq"
+                },
+                {
+                    "match": "\\b(?i:(\\.\\d+(e[\\-\\+]?\\d+)?))\\b",
+                    "name": "constant.numeric.float.kssq"
+                },
+                {
+                    "match": "\\b(?i:(\\d+e[\\-\\+]?\\d+))\\b",
+                    "name": "constant.numeric.float.kssq"
+                },
+                {
+                    "match": "\\b\\d+\\b",
+                    "name": "constant.numeric.integer.kssq"
+                }
+            ]
+        },
+		"letter": {
+            "match": "\\b(?i:true|false|null)\\b",
+            "name": "constant.language.kssq"
+        }
+	},
+	"scopeName": "source.kssq"
+}

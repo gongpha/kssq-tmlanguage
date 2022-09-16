@@ -1,0 +1,25 @@
+{
+    "name": "kssq2565",
+    "displayName": "KSSQ2565",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.67.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "kssq",
+            "aliases": ["KSSQ 2565", "kssq"],
+            "extensions": [".kssq"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "kssq",
+            "scopeName": "source.kssq",
+            "path": "./syntaxes/kssq.tmLanguage.json"
+        }]
+    }
+}
